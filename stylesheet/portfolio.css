@@ -203,7 +203,7 @@ footer {
 }
 
 .mySlides{
-    display: none; /* This prevents the images from being displayed, we will use JS to display these */
+    display: auto; /* This prevents the images from being displayed, we will use JS to display these */
 }
 
 /* Slideshow section / container */
