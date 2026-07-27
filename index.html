@@ -119,60 +119,66 @@
 
                         <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
                     <div style="text-align: center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span> 
-                    <span class="dot" onclick="currentSlide(4)"></span> 
-                    <span class="dot" onclick="currentSlide(5)"></span> 
-                    <span class="dot" onclick="currentSlide(6)"></span> 
-                    <span class="dot" onclick="currentSlide(7)"></span>
-                    <span class="dot" onclick="currentSlide(8)"></span>
-                    <span class="dot" onclick="currentSlide(9)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                        <span class="dot" onclick="currentSlide(4)"></span> 
+                        <span class="dot" onclick="currentSlide(5)"></span> 
+                        <span class="dot" onclick="currentSlide(6)"></span> 
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                        <span class="dot" onclick="currentSlide(8)"></span>
+                        <span class="dot" onclick="currentSlide(9)"></span>
                     </div>
-                <!-- Script JS dedicat pentru repararea navigării prin puncte (dots) -->
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
 
-  // Funcția apelată de săgeți (prev/next)
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
+                    <!-- Scriptul adăugat exact aici pentru a activa click-ul pe dots -->
+                    <script>
+                        // Inițializăm indexul caruselului
+                        if (typeof slideIndex === 'undefined') {
+                            var slideIndex = 1;
+                        }
+                        
+                        // Apelăm funcția pentru a ne asigura că totul pornește corect
+                        showSlides(slideIndex);
 
-  // Funcția apelată de puncte (dots) - rezolvă problema click-ului
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+                        // Funcția pentru săgeți (Next/Previous)
+                        function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                        }
 
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    
-    // Dacă utilizatorul trece de ultimul slide, revine la primul
-    if (n > slides.length) { slideIndex = 1; }    
-    // Dacă trece înapoi de primul slide, merge la ultimul
-    if (n < 1) { slideIndex = slides.length; }
-    
-    // Ascunde toate slide-urile
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    
-    // Elimină starea activă de pe toate punctele
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    
-    // Afișează slide-ul curent și activează punctul corespunzător
-    if (slides[slideIndex - 1]) {
-      slides[slideIndex - 1].style.display = "block";  
-    }
-    if (dots[slideIndex - 1]) {
-      dots[slideIndex - 1].className += " active";
-    }
-  }
-</script>
+                        // Funcția pentru click pe puncte (Dots)
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+
+                        // Logica principală care schimbă imaginile și activează punctele
+                        function showSlides(n) {
+                            let i;
+                            let slides = document.getElementsByClassName("mySlides");
+                            let dots = document.getElementsByClassName("dot");
+                            
+                            if (n > slides.length) { slideIndex = 1; }    
+                            if (n < 1) { slideIndex = slides.length; }
+                            
+                            // Ascundem toate slide-urile
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";  
+                            }
+                            
+                            // Ștergem clasa "active" de pe toate punctele vechi
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            
+                            // Afișăm slide-ul curent și îi dăm punctului clasa active
+                            if (slides[slideIndex - 1]) {
+                                slides[slideIndex - 1].style.display = "block";  
+                            }
+                            if (dots[slideIndex - 1]) {
+                                dots[slideIndex - 1].className += " active";
+                            }
+                        }
+                    </script>
+
             </div>
         </div>
 
