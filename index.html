@@ -130,27 +130,27 @@
                         <span class="dot" onclick="currentSlide(9)"></span>
                     </div>
 
-                    <!-- Script here to navigate on dots -->
+                   <!-- Script here to navigate on dots -->
                     <script>
-                        // Inițializăm indexul caruselului
+                        // Initialize the carousel index
                         if (typeof slideIndex === 'undefined') {
                             var slideIndex = 1;
                         }
                         
-                        // Apelăm funcția pentru a ne asigura că totul pornește corect
+                        // Call the function to ensure everything starts correctly
                         showSlides(slideIndex);
 
-                        // Funcția pentru săgeți (Next/Previous)
+                        // Function for the arrows (Next/Previous)
                         function plusSlides(n) {
                             showSlides(slideIndex += n);
                         }
 
-                        // Funcția pentru click pe puncte (Dots)
+                        // Function for clicking on the navigation points (Dots)
                         function currentSlide(n) {
                             showSlides(slideIndex = n);
                         }
 
-                        // Logica principală care schimbă imaginile și activează punctele
+                        // Main logic that toggles the images and activates the dots
                         function showSlides(n) {
                             let i;
                             let slides = document.getElementsByClassName("mySlides");
@@ -159,17 +159,17 @@
                             if (n > slides.length) { slideIndex = 1; }    
                             if (n < 1) { slideIndex = slides.length; }
                             
-                            // Ascundem toate slide-urile
+                            // Hide all slides
                             for (i = 0; i < slides.length; i++) {
                                 slides[i].style.display = "none";  
                             }
                             
-                            // Ștergem clasa "active" de pe toate punctele vechi
+                            // Remove the "active" class from all previous dots
                             for (i = 0; i < dots.length; i++) {
                                 dots[i].className = dots[i].className.replace(" active", "");
                             }
                             
-                            // Afișăm slide-ul curent și îi dăm punctului clasa active
+                            // Display the current slide and assign the active class to its corresponding dot
                             if (slides[slideIndex - 1]) {
                                 slides[slideIndex - 1].style.display = "block";  
                             }
@@ -178,7 +178,6 @@
                             }
                         }
                     </script>
-
             </div>
         </div>
 
