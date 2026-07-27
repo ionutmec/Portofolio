@@ -128,7 +128,51 @@
                     <span class="dot" onclick="currentSlide(7)"></span>
                     <span class="dot" onclick="currentSlide(8)"></span>
                     <span class="dot" onclick="currentSlide(9)"></span>
-                </div>
+                    </div>
+                <!-- Script JS dedicat pentru repararea navigării prin puncte (dots) -->
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Funcția apelată de săgeți (prev/next)
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Funcția apelată de puncte (dots) - rezolvă problema click-ului
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    
+    // Dacă utilizatorul trece de ultimul slide, revine la primul
+    if (n > slides.length) { slideIndex = 1; }    
+    // Dacă trece înapoi de primul slide, merge la ultimul
+    if (n < 1) { slideIndex = slides.length; }
+    
+    // Ascunde toate slide-urile
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    
+    // Elimină starea activă de pe toate punctele
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    // Afișează slide-ul curent și activează punctul corespunzător
+    if (slides[slideIndex - 1]) {
+      slides[slideIndex - 1].style.display = "block";  
+    }
+    if (dots[slideIndex - 1]) {
+      dots[slideIndex - 1].className += " active";
+    }
+  }
+</script>
             </div>
         </div>
 
