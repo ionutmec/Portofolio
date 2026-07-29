@@ -75,7 +75,7 @@
                     <!-- Slide 4 of 9 -->
                     <div class="mySlides fade">
                         <img class="Slideshow_Images" src="./images/HTML.PNG" alt="HTML">
-                        <div class="text">HTML CERTIFICATE</HTML:5> </div>
+                        <div class="text">HTML:5 CERTIFICATE</div>
                     </div>
                     <!-- Slide 5 of 9 -->
                     <div class="mySlides fade">
@@ -92,6 +92,7 @@
                         <img class="Slideshow_Images" src="./images/c.jpeg" alt="C#"> 
                         <div class="text">C#</div>
                     </div>
+<<<<<<< HEAD
 
                     <!-- Slide 8 of 9 -->
                     <div class="mySlides fade">
@@ -124,6 +125,94 @@
                     <span class="dot" onclick="currentSlide(8)"></span>
                     <span class="dot" onclick="currentSlide(9)"></span>
                 </div>
+=======
+                    <!-- Slide 8 of 9: Car Insurance (C#) -->
+                    <div class="mySlides fade">
+                        <div style="background-color: #24292e; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-radius: 8px; box-sizing: border-box; padding: 40px 20px;" class="Slideshow_Images">
+                            <h2 style="color: #2ea44f; margin-top: 0; font-size: 24px;">Car Insurance Application</h2>
+                            <p style="font-size: 15px; max-width: 500px; margin: 15px auto; line-height: 1.5; color: #c9d1d9;">A comprehensive C# application designed to calculate and manage car insurance quotes based on user risk profiles, historical data, and specific driver demographics.</p>
+                            <a href="https://github.com" target="_blank" style="background-color: #2ea44f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px; display: inline-block; font-size: 14px;">View Source Code</a>
+                        </div>
+                        <div class="text" style="background-color: rgba(0,0,0,0.7);">C# Project: Car Insurance</div>
+                    </div>
+                    <!-- Slide 9 of 9: Basic C# Projects -->
+                    <div class="mySlides fade">
+                        <div style="background-color: #24292e; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-radius: 8px; box-sizing: border-box; padding: 40px 20px;" class="Slideshow_Images">
+                            <h2 style="color: #2ea44f; margin-top: 0; font-size: 24px;">Basic C# Projects Collection</h2>
+                            <p style="font-size: 15px; max-width: 500px; margin: 15px auto; line-height: 1.5; color: #c9d1d9;">A curated repository containing foundational programs. This collection showcases core programming concepts including Object-Oriented Programming (OOP), loops, data structures, and console logic controls.</p>
+                            <a href="https://github.com" target="_blank" style="background-color: #2ea44f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px; display: inline-block; font-size: 14px;">View Source Code</a>
+                        </div>
+                        <div class="text" style="background-color: rgba(0,0,0,0.7);">C# Project: Basic Repository</div>
+                    </div>
+
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">❮</a>
+                    <a class="Next" onclick="plusSlides(1)">❯</a>
+                    </div>
+                        <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                        <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                    <div style="text-align: center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                        <span class="dot" onclick="currentSlide(4)"></span> 
+                        <span class="dot" onclick="currentSlide(5)"></span> 
+                        <span class="dot" onclick="currentSlide(6)"></span> 
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                        <span class="dot" onclick="currentSlide(8)"></span>
+                        <span class="dot" onclick="currentSlide(9)"></span>
+                    </div>
+
+                   <!-- Script here to navigate on dots -->
+                    <script>
+                        // Initialize the carousel index
+                        if (typeof slideIndex === 'undefined') {
+                            var slideIndex = 1;
+                        }
+                        
+                        // Call the function to ensure everything starts correctly
+                        showSlides(slideIndex);
+
+                        // Function for the arrows (Next/Previous)
+                        function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                        }
+
+                        // Function for clicking on the navigation points (Dots)
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+
+                        // Main logic that toggles the images and activates the dots
+                        function showSlides(n) {
+                            let i;
+                            let slides = document.getElementsByClassName("mySlides");
+                            let dots = document.getElementsByClassName("dot");
+                            
+                            if (n > slides.length) { slideIndex = 1; }    
+                            if (n < 1) { slideIndex = slides.length; }
+                            
+                            // Hide all slides
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";  
+                            }
+                            
+                            // Remove the "active" class from all previous dots
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            
+                            // Display the current slide and assign the active class to its corresponding dot
+                            if (slides[slideIndex - 1]) {
+                                slides[slideIndex - 1].style.display = "block";  
+                            }
+                            if (dots[slideIndex - 1]) {
+                                dots[slideIndex - 1].className += " active";
+                            }
+                        }
+                    </script>
+>>>>>>> 3c25b1b6b9316120e8f917287a47c6fbe72a71e9
             </div>
         </div>
 
@@ -149,26 +238,24 @@
             </div>
         </div>
 
-        <!-- GitHub section -->
-        <div class="Row" id="GitHub">
-            <!-- Left column -->
-            <div class="Column_1">
-                <h1>GitHub</h1>
-                <p>You can view my coding projects on my GitHub profile here:
-                    <br>
-                    <p class="center"><a href="https://github.com/ionutmec" target="_blank">My coding projects</a></p>
-                </p>
-            </div>
-            <!-- Right column -->
-            <div class="Column_2">
-                <a href="https://github.com/the-tech-academy" target="_blank"><img src="./images/GitHub.png"></a>
+       <!-- GitHub section -->
+        <div class="Row" id="GitHub" style="padding: 40px 20px; text-align: center; background-color: #f6f8fa; border-top: 1px solid #e1e4e8;">
+            <h2 style="color: #24292e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; margin-bottom: 10px;">My C# Repositories</h2>
+            <p style="color: #586069; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; margin-bottom: 25px;">Explore the full source code and project documentation directly on GitHub.</p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                <a href="https://github.com/ionutmec/CarInsurance" target="_blank" style="background-color: #2ea44f; color: white !important; text-decoration: none; padding: 12px 24px; font-size: 14px; font-weight: bold; border-radius: 6px; font-family: -apple-system, sans-serif; display: inline-block; transition: background-color 0.2s;">
+                    Car Insurance Repository 🚀
+                </a>
+                <a href="https://github.com/ionutmec/Basic-C-Sharp-Projects" target="_blank" style="background-color: #0366d6; color: white !important; text-decoration: none; padding: 12px 24px; font-size: 14px; font-weight: bold; border-radius: 6px; font-family: -apple-system, sans-serif; display: inline-block; transition: background-color 0.2s;">
+                    Basic C# Projects Repository 📚
+                </a>
             </div>
         </div>
-
         
         <!-- Footer section -->
         <footer>
-                <p class="center">Ionut Mecu</a></p><br>
+            <p class="center">Ionut Mecu</p><br>
         </footer>
         <script src="./JS/portfolio.js"></script>
     </body>

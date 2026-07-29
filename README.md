@@ -1,1 +1,25 @@
-This is my Portofolio 
+Personal Portfolio Website
+
+Welcome to my personal portfolio repository! 
+
+This website is designed to showcase my journey as a software developer, detailing my academic achievements, certified milestones, and technical projects.
+
+Live website link: ionutmec.github.io/Portofolio/
+
+🚀 Key Highlights & Sections
+
+Interactive Career Slideshow: A 9-slide interactive carousel detailing my core credentials, web development capabilities, and structural database competencies.
+C# / .NET Showcases: Fully integrated visual slides containing deep-dive backend solutions like my customized Insurance Pricing Engine.
+Direct Repository Hub: A clean, optimized link center designed at the footer to let technical reviewers inspect my clean code architectures instantly.
+
+🛠️ Tech Stack & Built With
+
+Structure & UI Logic: HTML5 & Semantic Web Components
+Layout Enginery: Responsive Native CSS Grid & Flexbox architectures
+Interactive Controller: Modular Vanilla JavaScript handling dynamic slider logic arrays
+
+🎨 Design Features
+
+Zero Dependencies: Formulated completely using pure standard scripts without bulky heavy external visual libraries.
+Fluid Layouts: Automatically snaps elements smoothly between mobile screen interfaces and wide desktop viewports.
+Seamless Touch Support: Custom functional jump controllers built over navigation points for fast mobile navigation switching.
